@@ -1,6 +1,8 @@
-function range(start, end) {
+function range(start, end, step) {
   var out = [];
-  for (var i = start; i <= end; i++) {
+  if (step === undefined)
+    step = 1;
+  for (var i = start; i <= end; i += step) {
     out.push(i);
   }
   return out;
